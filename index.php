@@ -39,7 +39,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./img/task.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="./img/ok.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 Assignemts
             </a>
         </div>
@@ -47,27 +47,29 @@
 
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Calculator</a>
+            <a class="nav-link active" aria-current="page" href=" index.php">Calculator</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Electric</a>
+            <a class="nav-link" href="electric.php">Electric-Bill</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="leap-year.php">Leap-Year</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Num-Check</a>
+            <a class="nav-link" href="num_check.php">Num-Check</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="count.php">Count-Display</a>
         </li>
-
+        <li class="nav-item">
+            <a class="nav-link" href="associative_array.php">Employee-Salary</a>
+        </li>
     </ul>
 
 
 
     <div class="container">
-        <h1>Math Calculator</h1>
+        <h3>Assignment: Calculator</h3>
         <p>Input number to be calculated then select the operator type from the dropdown</p>
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
             <div class="row">
@@ -80,10 +82,10 @@
                         <!-- Operation -->
                         <label for="sel1">Select Operation:</label>
                         <div class="container-fluid col-8">
-                            <input type="submit" class="btn btn-secondary" name="operator" value="add +">
-                            <input type="submit" class="btn btn-secondary" name="operator" value="sub -">
-                            <input type="submit" class="btn btn-secondary" name="operator" value="mul *">
-                            <input type="submit" class="btn btn-secondary" name="operator" value="div /">
+                            <input type="submit" class="btn btn-info" name="operator" value="add +">
+                            <input type="submit" class="btn btn-info" name="operator" value="mul *">
+                            <input type="submit" class="btn btn-info" name="operator" value="sub -">
+                            <input type="submit" class="btn btn-info" name="operator" value="div /">
                         </div>
                         <!-- Number 2 -->
                         <label for="num2">Second Number:</label>

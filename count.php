@@ -23,14 +23,15 @@
 
     $range = '';
     for ($start >=0 ;  $start <= $end; $start ++){
-       $range .= $start;
+       $range .= $start.' ';
+       ;
     }
     
     ?>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./img/task.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="./img/ok.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 Assignemts
             </a>
         </div>
@@ -41,33 +42,40 @@
             <a class="nav-link " href="index.php">Calculator</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Electric</a>
+            <a class="nav-link" href="electric.php">Electric-Bill</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="leap-year.php">Leap-Year</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Num-Check</a>
+            <a class="nav-link" href="num_check.php">Num-Check</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="count.php">Count-Display</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="associative_array.php">Employee-Salary</a>
         </li>
 
     </ul>
 
     <div class="container">
-        <h1>Range Counter Display</h1>
+        <h3>Assignment: Range Counter Display</h3>
         <div class="col-5 form-group">
             <form action="" method="get">
                 <label for="" name="">START</label>
                 <input type="number" required class="form-control" name="start"
                     value="<?= (isset($initial)?$initial:"")?>" id="" placeholder="Enter Value">
                 <label for="" name="">END</label>
+
                 <input type="number" required class="form-control" name="end" value="<?= (isset($final)?$final:"")?>"
                     id="" placeholder="Enter Value">
+                <br>
 
-                <input type="submit" class="form-control btn btn-outline-info" name="check" value="Range">
-                <input type="readonly" class="form-control" value="<?php echo $range ?>" placeholder="Result" disabled>
+                <button type="submit" name="check" class="form-control btn btn-info">Count</button>
+                <br>
+                <hr>
+                <p><?= $range ?></p>
             </form>
         </div>
     </div>
